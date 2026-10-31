@@ -21,6 +21,7 @@ Everything here is written from my own lab notes. Details like addresses, networ
 
 See the full [activity log](LOG.md).
 
+- **2026-10-31:** Scoped Exposure Check's HTTPS checks and reviewed third-party dev plugins for supply-chain risk before installing.
 - **2026-10-30:** Started Exposure Check, a passive security report for small-business domains, on an isolated build container.
 - **2026-10-29:** Built an isolated pentest lab on its own VLAN; verified the lab can't reach the home network.
 - **2026-10-29:** Built a MariaDB server for SQL coursework with least-privilege accounts.

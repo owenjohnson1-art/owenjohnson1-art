@@ -2,6 +2,11 @@
 
 Newest first. Each entry: what I did, and the skills involved.
 
+## 2026-10-31
+
+- Decided the scan scope for Exposure Check's HTTPS check: one plain HTTP request to test the redirect, and up to 3 same-site redirects so headers are judged on the real homepage. Kept the tool strictly passive. *Security assessment, scoping*
+- Reviewed third-party AI coding plugins before installing them on the build container; installed two and declined a stale fork of a proxy that would have handled account credentials. *Supply-chain risk, least privilege*
+
 ## 2026-10-30
 
 - Chose a side project, [Exposure Check](projects/exposure-check.md): a passive security report for small-business domains. Wrote the spec and a 17-step task list. *Product scoping, security assessment*

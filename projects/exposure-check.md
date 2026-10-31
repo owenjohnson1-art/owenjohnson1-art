@@ -8,7 +8,7 @@ A small business enters its domain and gets a plain-English security report: a g
 
 ## Checks
 
-All checks are **passive**: public DNS, certificate transparency logs and one normal request to the homepage. No port scanning or probing, so it's safe and legal to run against any domain.
+All checks are **passive**: public DNS, certificate transparency logs and a normal request to the homepage over HTTP and HTTPS (following at most 3 same-site redirects). No port scanning or probing, so it's safe and legal to run against any domain.
 
 - Email spoofing protection: SPF, DKIM, DMARC
 - Mail servers
@@ -26,4 +26,4 @@ All checks are **passive**: public DNS, certificate transparency logs and one no
 
 ## Status
 
-Spec and task list written; build in progress.
+8 of 17 tasks done: SPF, DKIM, DMARC, MX, TLS certificate, HTTPS redirect and security headers checks, each with tests. Build in progress.
