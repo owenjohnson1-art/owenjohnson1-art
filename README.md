@@ -1,35 +1,36 @@
-# Technical Portfolio & Systems Documentation
+# Owen Johnson: Homelab and Security Portfolio
 
-Hands-on IT infrastructure, security operations, and system administration portfolio. This space documents laboratory environments, automation scripts, database architectures, and defensive security workflows.
+I work in cybersecurity and I'm studying for a bachelor's in cybersecurity. This repo is a running record of what I build, break and fix in my homelab: real infrastructure, real incidents, and the security decisions behind them.
 
----
+Everything here is written from my own lab notes. Details like addresses, network names and credentials are redacted on purpose.
 
-## 🛠️ Core Technical Focus Areas
+## Skills shown here
 
-### 🖥️ Systems & Infrastructure Administration
-- **Virtualization & Systems:** Enterprise hypervisors, containerized application environments, system hardening, and resource orchestration.
-- **Identity & Access Management:** Directory services, access control policies, service account management, and group policy enforcement.
+| Area | What I've done | Where |
+|---|---|---|
+| Virtualization | Run a Proxmox VE host with containers and VMs; backup, restore and rebuild | [Homelab infrastructure](projects/homelab-infrastructure.md) |
+| Storage and recovery | Recovered from a degraded ZFS pool and rebuilt it as a mirror with no data loss | [ZFS recovery](projects/zfs-storage-recovery.md) |
+| Network security | FortiGate recovery over the serial console, VLAN segmentation, firewall policy cleanup | [Firewall and segmentation](projects/firewall-and-segmentation.md) |
+| Monitoring | Twice-daily health checks, disk health, rogue device detection, phone alerts | [Monitoring and alerting](projects/monitoring-and-alerting.md) |
+| Least privilege | Read-only API access for an automation agent across 4 platforms, verified by testing writes | [Least-privilege automation](projects/least-privilege-automation.md) |
+| Offensive security | Isolated pentest lab with Kali, DVWA and OWASP Juice Shop, with isolation tested | [Pentest lab](projects/pentest-lab.md) |
+| Databases | MariaDB server with role-separated accounts for SQL practice | [SQL lab](projects/sql-lab.md) |
+| Development | Passive domain security scanner for small businesses (in progress) | [Exposure Check](projects/exposure-check.md) |
 
-### 🛡️ Network Security & Monitoring
-- **Network Architecture:** Enterprise routing/switching, VLAN segmentation, firewall policy management, and secure remote access.
-- **Security Operations & SIEM:** Centralized log aggregation, event correlation, detection rule engineering, and endpoint protection.
-- **Threat Intelligence & Telemetry:** Deployed honeynets and threat collectors to capture, analyze, and mitigate malicious network activity.
+## Recent activity
 
-### 🗄️ Databases & Automation
-- **Database Operations:** Relational database management (SQL), schema design, privilege separation, and query audit logging.
-- **Scripting & Tooling:** Administrative automation and custom security tools built using PowerShell, Bash, and Python.
+See the full [activity log](LOG.md).
 
----
+- **2026-10-30:** Started Exposure Check, a passive security report for small-business domains, on an isolated build container.
+- **2026-10-29:** Built an isolated pentest lab on its own VLAN; verified the lab can't reach the home network.
+- **2026-10-29:** Built a MariaDB server for SQL coursework with least-privilege accounts.
+- **2026-10-25:** Regained admin access to a locked-out FortiGate over the serial console and cleaned up the VLAN layout.
+- **2026-10-23:** Rebuilt failing ZFS storage as a mirror and set up automated, tested backups.
 
-## 📂 Repository Index
+## How I work
 
-| Repository Category | Description | Primary Stack |
-| :--- | :--- | :--- |
-| **Infrastructure & Labs** | Hypervisor topologies, network segmentation, and system builds. | Virtualization, Firewalls, Containers |
-| **Security Ops & SIEM** | Log analysis pipelines, detection queries, and honeynet deployments. | SIEM, Detection Rules, Telemetry |
-| **Database & Scripting** | Database administration, SQL security auditing, and automation tools. | SQL, PowerShell, Python, Bash |
+I use AI-assisted tooling (Claude Code) as part of my workflow. I plan the work, make the design and security decisions, and verify the results; the AI helps run commands and write up notes. Using these tools safely is a skill too: the agent runs with read-only keys, can't see secrets, and is isolated from anything it doesn't need.
 
----
+## Next steps
 
-## 📈 Activity & Status
-- **Current Objective:** Expanding real-world laboratory implementations, refining SIEM detection coverage, and optimizing database security baselines.
+Next in the lab: Metasploitable and VulnHub targets, a vulnerability scan of the home network, and an Active Directory attack and detection lab.
