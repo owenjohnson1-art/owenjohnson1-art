@@ -21,7 +21,7 @@ Everything here is written from my own lab notes. Details like addresses, networ
 
 See the full [activity log](LOG.md).
 
-- **2026-11-01:** Security-reviewed Exposure Check, found and fixed an SSRF gap, verified the fix with live tests.
+- **2026-11-01:** Security-reviewed Exposure Check: fixed an SSRF gap and four DoS/injection issues, and added type checking and a coverage gate.
 - **2026-10-31:** Scoped Exposure Check's HTTPS checks and reviewed third-party dev plugins for supply-chain risk before installing.
 - **2026-10-30:** Started Exposure Check, a passive security report for small-business domains, on an isolated build container.
 - **2026-10-29:** Built an isolated pentest lab on its own VLAN; verified the lab can't reach the home network.
