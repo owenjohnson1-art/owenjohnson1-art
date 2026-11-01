@@ -6,6 +6,7 @@ Newest first. Each entry: what I did, and the skills involved.
 
 - Set up an engineering toolchain for AI-assisted development: static type checking (Pyright) and a 95% test-coverage floor as merge gates, language-server navigation and a code knowledge graph to cut token use, a security-warning plugin, and a cheaper model for routine tasks. *Developer tooling, quality engineering, cost control*
 - Ran a full security review of Exposure Check. Four issues fixed, each with a regression test: unbounded memory use on large certificate-log replies, a slow-read connection that could pile up, an unbounded SPF redirect chain, and terminal escape injection in CLI output. *Application security, DoS hardening, secure code review*
+- Decided to enforce an 8 KB request-size cap in the app as well as at the proxy (defence in depth); verified oversized and chunked uploads get HTTP 413 while normal reports still work. *Defence in depth, DoS hardening*
 - Reviewed the finished Exposure Check build: ran the test suite and linter, checked results against real domains, and audited the network code against the passive-only rule. *Code review, QA*
 - Found a server-side request forgery (SSRF) gap: a domain pointing at a private address would make the server fetch internal hosts or cloud metadata. Specified the fix (allow only public addresses, connect to the checked IP to stop DNS rebinding) and verified it against loopback, private and link-local test domains. *Application security, SSRF, secure design*
 
