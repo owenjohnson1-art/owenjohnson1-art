@@ -26,4 +26,4 @@ All checks are **passive**: public DNS, certificate transparency logs and a norm
 
 ## Status
 
-8 of 17 tasks done: SPF, DKIM, DMARC, MX, TLS certificate, HTTPS redirect and security headers checks, each with tests. Build in progress.
+Feature-complete: 11 checks (SPF, DKIM, DMARC, MX, TLS, HTTPS redirect, security headers, software disclosure, subdomains via certificate transparency, DNSSEC, CAA), a grading engine, CLI, web app with rate limiting and caching, and 308 tests. A security review found an SSRF gap, now fixed: the scanner only connects to public addresses and pins the checked IP to stop DNS rebinding. Next: proxy-aware rate limiting, then deployment.

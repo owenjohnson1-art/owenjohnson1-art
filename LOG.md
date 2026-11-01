@@ -2,6 +2,11 @@
 
 Newest first. Each entry: what I did, and the skills involved.
 
+## 2026-11-01
+
+- Reviewed the finished Exposure Check build: ran the test suite and linter, checked results against real domains, and audited the network code against the passive-only rule. *Code review, QA*
+- Found a server-side request forgery (SSRF) gap: a domain pointing at a private address would make the server fetch internal hosts or cloud metadata. Specified the fix (allow only public addresses, connect to the checked IP to stop DNS rebinding) and verified it against loopback, private and link-local test domains. *Application security, SSRF, secure design*
+
 ## 2026-10-31
 
 - Decided the scan scope for Exposure Check's HTTPS check: one plain HTTP request to test the redirect, and up to 3 same-site redirects so headers are judged on the real homepage. Kept the tool strictly passive. *Security assessment, scoping*
