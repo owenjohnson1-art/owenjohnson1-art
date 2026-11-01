@@ -28,12 +28,12 @@ A pipeline on my homelab server that turns one recorded voiceover into an animat
 
 ## Descent template (2026-11-01)
 
-After planning the channel format (calm narration, long videos with shorts cut from them), I rebuilt the template around one signature visual: an animated descent driven by an altitude track.
+I planned the channel format (calm narration in my own voice, long videos with shorts cut from them) and chose the visual style; the AI agent then rebuilt the template to that plan around one signature visual: an animated descent driven by an altitude track.
 
 - **Data-driven HUD:** an altitude ruler and live temperature and pressure readouts, interpolated from a reference atmosphere table (pressure interpolated logarithmically). Each environment is one JSON file, so the same template can do the ocean or other places.
 - **Scene types:** chapter cards, count-up facts, comparison bars, a self-drawing temperature graph, public-domain NASA imagery with automatic credits, and face-cam cuts synced to the narration.
 - **Sound:** an ambient bed synthesised from filtered noise (Python, NumPy, SciPy), mixed by altitude, so there are no third-party sound licences to track.
-- **Research:** every fact in the script is checked against a source, with a source table. Two of my first-draft numbers were wrong and got fixed.
+- **Research:** the AI-drafted script was fact-checked against sources, with a source table I reviewed. Two first-draft numbers were wrong and got fixed.
 - **Tuning:** the film-grain overlay made files 6× larger; refreshing it every third frame cut a 4.4-minute render from 832 MB to 131 MB.
 
 ## Status
