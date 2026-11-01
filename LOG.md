@@ -4,6 +4,7 @@ Newest first. Each entry: what I did, and the skills involved.
 
 ## 2026-11-01
 
+- Started a [self-hosted video pipeline](projects/video-pipeline.md): one voiceover becomes a captioned explainer video and vertical shorts. Built a new container with local speech-to-text, a React video template and a self-hosted scheduler; fixed a caption layout bug and made renders about 5× faster. *Linux, Docker, FFmpeg, Python, TypeScript/React, performance tuning*
 - Wrapped up Exposure Check as a finished prototype: it proved the AI-assisted workflow (isolated build box, task loop, test/type/security gates), and I decided not to launch it. *Project scoping, prioritisation*
 - Set up an engineering toolchain for AI-assisted development: static type checking (Pyright) and a 95% test-coverage floor as merge gates, language-server navigation and a code knowledge graph to cut token use, a security-warning plugin, and a cheaper model for routine tasks. *Developer tooling, quality engineering, cost control*
 - Ran a full security review of Exposure Check. Four issues fixed, each with a regression test: unbounded memory use on large certificate-log replies, a slow-read connection that could pile up, an unbounded SPF redirect chain, and terminal escape injection in CLI output. *Application security, DoS hardening, secure code review*
