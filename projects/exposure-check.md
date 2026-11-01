@@ -1,6 +1,6 @@
-# Exposure Check (in progress)
+# Exposure Check (prototype, complete)
 
-**Started:** 2026-10-30
+**Built:** 2026-10-30 to 2026-11-01
 
 ## What it is
 
@@ -26,4 +26,6 @@ All checks are **passive**: public DNS, certificate transparency logs and a norm
 
 ## Status
 
-Feature-complete: 11 checks (SPF, DKIM, DMARC, MX, TLS, HTTPS redirect, security headers, software disclosure, subdomains via certificate transparency, DNSSEC, CAA), a grading engine, CLI, web app with rate limiting and caching, and 317 tests at 99% coverage, type-checked with Pyright. Security reviews found and fixed an SSRF gap (the scanner only connects to public addresses and pins the checked IP to stop DNS rebinding) plus four DoS and injection issues. The app caps request size at 8 KB and is deploy-ready behind a Caddy reverse proxy that it trusts for client IPs, verified against spoofed headers. Next: deployment.
+Feature-complete: 11 checks (SPF, DKIM, DMARC, MX, TLS, HTTPS redirect, security headers, software disclosure, subdomains via certificate transparency, DNSSEC, CAA), a grading engine, CLI, web app with rate limiting and caching, and 317 tests at 99% coverage, type-checked with Pyright. Security reviews found and fixed an SSRF gap (the scanner only connects to public addresses and pins the checked IP to stop DNS rebinding) plus four DoS and injection issues. The app caps request size at 8 KB and is deploy-ready behind a Caddy reverse proxy that it trusts for client IPs, verified against spoofed headers.
+
+I built this as a prototype to test an AI-assisted development workflow: an isolated build container, an automated task loop, and quality gates (tests, coverage, type checking, security review). The workflow worked, and I chose not to launch the product.

@@ -15,7 +15,7 @@ Everything here is written from my own lab notes. Details like addresses, networ
 | Least privilege | Read-only API access for an automation agent across 4 platforms, verified by testing writes | [Least-privilege automation](projects/least-privilege-automation.md) |
 | Offensive security | Isolated pentest lab with Kali, DVWA and OWASP Juice Shop, with isolation tested | [Pentest lab](projects/pentest-lab.md) |
 | Databases | MariaDB server with role-separated accounts for SQL practice | [SQL lab](projects/sql-lab.md) |
-| Development | Passive domain security scanner for small businesses (in progress) | [Exposure Check](projects/exposure-check.md) |
+| Development | Passive domain security scanner for small businesses (prototype) | [Exposure Check](projects/exposure-check.md) |
 
 ## Recent activity
 
