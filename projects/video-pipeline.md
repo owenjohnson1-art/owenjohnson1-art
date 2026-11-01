@@ -26,8 +26,18 @@ A pipeline on my homelab server that turns one recorded voiceover into an animat
 - Runs in its own unprivileged container. Scheduler secrets are generated on the server and never leave it.
 - Platform posting goes through official APIs only, with no shared logins.
 
+## Descent template (2026-11-01)
+
+After planning the channel format (calm narration, long videos with shorts cut from them), I rebuilt the template around one signature visual: an animated descent driven by an altitude track.
+
+- **Data-driven HUD:** an altitude ruler and live temperature and pressure readouts, interpolated from a reference atmosphere table (pressure interpolated logarithmically). Each environment is one JSON file, so the same template can do the ocean or other places.
+- **Scene types:** chapter cards, count-up facts, comparison bars, a self-drawing temperature graph, public-domain NASA imagery with automatic credits, and face-cam cuts synced to the narration.
+- **Sound:** an ambient bed synthesised from filtered noise (Python, NumPy, SciPy), mixed by altitude, so there are no third-party sound licences to track.
+- **Research:** every fact in the script is checked against a source, with a source table. Two of my first-draft numbers were wrong and got fixed.
+- **Tuning:** the film-grain overlay made files 6× larger; refreshing it every third frame cut a 4.4-minute render from 832 MB to 131 MB.
+
 ## Status
 
-Tested end to end with a synthetic voice. Next: pick a topic and record the first real voiceover, and register the platform API apps.
+The template is tested end to end with a synthetic voice and placeholder face cam. Next: record the first real narration.
 
 *Stack: Linux containers, FFmpeg, Python, faster-whisper, TypeScript/React (Remotion), Docker Compose.*

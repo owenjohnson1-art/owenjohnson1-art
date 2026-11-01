@@ -21,6 +21,7 @@ Everything here is written from my own lab notes. Details like addresses, networ
 
 See the full [activity log](LOG.md).
 
+- **2026-11-01:** Rebuilt the video template as a data-driven animated descent with a live instrument HUD; fact-checked the first script.
 - **2026-11-01:** Started a self-hosted video pipeline: local speech-to-text, a React video template for long videos and shorts, and a self-hosted scheduler.
 - **2026-11-01:** Security-reviewed Exposure Check: fixed an SSRF gap and four DoS/injection issues, added type checking and a coverage gate, and made it deploy-ready behind a reverse proxy.
 - **2026-10-31:** Scoped Exposure Check's HTTPS checks and reviewed third-party dev plugins for supply-chain risk before installing.
