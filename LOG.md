@@ -4,6 +4,7 @@ Newest first. Each entry: what I did, and the skills involved.
 
 ## 2026-11-02
 
+- Benchmarked 3D rendering for the video pipeline: one cinematic Blender frame took 59 s on the server's CPU against 9–14 s on a laptop RTX GPU. Found the GPU was shared with other running apps, and decided to render a reusable shot library on the GPU while the server keeps compositing. *Performance testing, capacity planning*
 - Upgraded the video template with real-time 3D (lander and planet shots in three.js, CPU-rendered) and a public-domain footage pipeline (NASA image/video library and Goddard SVS, with automatic credits). Diagnosed an out-of-memory kill from host logs and resized the container. *3D graphics, shaders, media licensing, Linux troubleshooting*
 
 ## 2026-11-01
