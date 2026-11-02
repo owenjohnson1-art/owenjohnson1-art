@@ -21,6 +21,7 @@ Everything here is written from my own lab notes. Details like addresses, networ
 
 See the full [activity log](LOG.md).
 
+- **2026-11-02:** Rendered the first shot of a GPU 3D shot library in Blender (scripted, volumetric atmosphere).
 - **2026-11-02:** Added CPU-rendered 3D and a NASA public-domain footage pipeline to the video template; fixed an out-of-memory render crash.
 - **2026-11-01:** Rebuilt the video template as a data-driven animated descent with a live instrument HUD; fact-checked the first script.
 - **2026-11-01:** Started a self-hosted video pipeline: local speech-to-text, a React video template for long videos and shorts, and a self-hosted scheduler.

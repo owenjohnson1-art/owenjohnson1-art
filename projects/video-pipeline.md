@@ -45,6 +45,10 @@ I asked for richer animation and real footage. The agent added:
 - **Texture-based parallax** cloud and haze layers, and a perspective ground plane.
 - **Troubleshooting:** the first 3D render was killed by the kernel's out-of-memory killer. I confirmed it in the host logs, then resized the container and tuned render parallelism and the video cache.
 
+### GPU shot library (Blender)
+
+Benchmarks showed cinematic 3D was far too slow on the server's CPU, so I decided to render a reusable library of shots once on a laptop GPU and keep the server for compositing. The agent wrote each shot as a headless Blender Python script (Cycles with OptiX and denoising). The first shot is a 10-second orbit of Venus with a volumetric atmosphere whose density fades with altitude, a separately drifting upper cloud deck, and a slow camera push-in. I reviewed preview stills over two rounds (lighting, a hard atmosphere edge, texture resolution) before approving the full render: 300 frames at about 19 s each, encoded to H.264 on the server.
+
 ## Status
 
 The template is tested end to end with a synthetic voice and placeholder face cam. Next: record the first real narration.
