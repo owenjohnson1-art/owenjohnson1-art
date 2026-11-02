@@ -36,6 +36,15 @@ I planned the channel format (calm narration in my own voice, long videos with s
 - **Research:** the AI-drafted script was fact-checked against sources, with a source table I reviewed. Two first-draft numbers were wrong and got fixed.
 - **Tuning:** the film-grain overlay made files 6× larger; refreshing it every third frame cut a 4.4-minute render from 832 MB to 131 MB.
 
+## 3D and real footage (2026-11-02)
+
+I asked for richer animation and real footage. The agent added:
+
+- **Real-time 3D in the render:** a Venera-style lander and rotating planet shots in three.js, rendered on the CPU (no GPU in the server). The planet uses NASA's Magellan radar map and a procedurally generated cloud texture, with a shader for the atmosphere glow.
+- **Public-domain footage pipeline:** search-and-fetch tools for NASA's image and video library and the Goddard Scientific Visualization Studio, which normalise clips to 1080p30 and write the credits automatically.
+- **Texture-based parallax** cloud and haze layers, and a perspective ground plane.
+- **Troubleshooting:** the first 3D render was killed by the kernel's out-of-memory killer. I confirmed it in the host logs, then resized the container and tuned render parallelism and the video cache.
+
 ## Status
 
 The template is tested end to end with a synthetic voice and placeholder face cam. Next: record the first real narration.

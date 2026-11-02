@@ -2,6 +2,10 @@
 
 Newest first. Each entry: what I did, and the skills involved.
 
+## 2026-11-02
+
+- Upgraded the video template with real-time 3D (lander and planet shots in three.js, CPU-rendered) and a public-domain footage pipeline (NASA image/video library and Goddard SVS, with automatic credits). Diagnosed an out-of-memory kill from host logs and resized the container. *3D graphics, shaders, media licensing, Linux troubleshooting*
+
 ## 2026-11-01
 
 - Planned a science channel (format, schedule, visual style) and had the AI agent rebuild the video template around an animated, data-driven "descent" with a live altitude/temperature/pressure HUD, NASA imagery with automatic credits, face-cam cuts and a synthesised sound bed. Fact-checked the first script against sources and cut render file size 6×. *TypeScript/React, Python (NumPy/SciPy), data visualisation, research, performance tuning*
