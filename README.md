@@ -33,9 +33,7 @@ See the full [activity log](LOG.md).
 - **2026-10-25:** Regained admin access to a locked-out FortiGate over the serial console and cleaned up the VLAN layout.
 - **2026-10-23:** Rebuilt failing ZFS storage as a mirror and set up automated, tested backups.
 
-## How I work
 
-I use AI-assisted tooling (Claude Code) as part of my workflow. I plan the work, make the design and security decisions, and verify the results; the AI helps run commands and write up notes. Using these tools safely is a skill too: the agent runs with read-only keys, can't see secrets, and is isolated from anything it doesn't need.
 
 ## Next steps
 
