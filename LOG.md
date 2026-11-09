@@ -2,6 +2,10 @@
 
 Newest first. Each entry: what I did, and the skills involved.
 
+## 2026-11-08
+
+- Added a scheduled 6am briefing (calendar, email, shared files) to the homelab's monitoring agent. Because email is attacker-controlled input, limited the run to read-only tools and blocked every send, delete, share and shell tool, so prompt injection has nothing to act with. *Prompt-injection defence, least privilege, automation*
+
 ## 2026-11-02
 
 - Built the first shot of a GPU-rendered 3D shot library: a scripted Blender scene (volumetric atmosphere, layered clouds, camera move), reviewed through preview stills before a 97-minute full render, then encoded on the server for the video template. *Blender/Python, 3D lighting, render pipelines*

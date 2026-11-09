@@ -1,6 +1,6 @@
 # Least-privilege access for an automation agent
 
-**Dates:** 2026-10-23 to 2026-10-25
+**Dates:** 2026-10-23 to 2026-10-25, extended 2026-11-08
 
 ## Goal
 
@@ -22,6 +22,10 @@ The agent runs in its own container, as a non-root user with no sudo. Every plat
 - Keys live in a file outside the agent's working folder and outside cloud-synced storage.
 - The agent's own permission settings **block reading that file** and **block editing the health check scripts**. The one pre-approved command is the fixed health check script, which loads the keys itself.
 - Anything that does need to change something (development work) runs in a **separate container that has no keys at all**.
+
+## Daily briefing from untrusted input (2026-11-08)
+
+The same agent now sends a 6am briefing to my phone: today's calendar, emails that need me, and new shared files. Email is untrusted input, since anyone can send text that tries to instruct the agent (prompt injection). So the scheduled run gets only the read tools for mail, calendar and files. Every send, reply, forward, delete, share, calendar-edit and shell tool is explicitly blocked, so a hostile email has nothing to act with. The prompt also says not to follow instructions found in content. Tested with a live run.
 
 ## Why it matters
 
