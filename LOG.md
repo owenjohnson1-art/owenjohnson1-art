@@ -4,6 +4,7 @@ Newest first. Each entry: what I did, and the skills involved.
 
 ## 2026-11-08
 
+- Self-hosted the notification server so the private briefing never leaves home: login required, deny-all default, separate read-only and post-only accounts, and access rules verified. Kept outage alerts on the public service so they still arrive if the server is down. *Privacy, self-hosting, Docker, access control, alert design*
 - Added a scheduled 6am briefing (calendar, email, shared files) to the homelab's monitoring agent. Because email is attacker-controlled input, limited the run to read-only tools and blocked every send, delete, share and shell tool, so prompt injection has nothing to act with. *Prompt-injection defence, least privilege, automation*
 
 ## 2026-11-02

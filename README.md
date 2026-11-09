@@ -21,6 +21,7 @@ Everything here is written from my own lab notes. Details like addresses, networ
 
 See the full [activity log](LOG.md).
 
+- **2026-11-08:** Self-hosted push notifications (login required, least-privilege accounts) so private briefings stay on the home network.
 - **2026-11-08:** Added a 6am calendar and email briefing to the monitoring agent, locked to read-only tools to defend against prompt injection.
 - **2026-11-02:** Rendered the first shot of a GPU 3D shot library in Blender (scripted, volumetric atmosphere).
 - **2026-11-02:** Added CPU-rendered 3D and a NASA public-domain footage pipeline to the video template; fixed an out-of-memory render crash.
