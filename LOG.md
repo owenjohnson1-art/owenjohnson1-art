@@ -2,6 +2,11 @@
 
 Newest first. Each entry: what I did, and the skills involved.
 
+## 2026-11-12
+
+- Made the unattended build loop survive subscription usage limits: it reads the reset time from the tool's message, sleeps until then and carries on, so a build can run for days. Added a working-hours window and a pause file, and tested the time parsing against several message formats. *Bash, automation, resilience, cost control*
+- Split AI work between two agents: an interactive one for planning and review, and the always-on server agent for scheduled jobs. Moved a daily web-research job to the server; because web pages are untrusted input and that container holds read-only infrastructure keys, the run gets web tools only (no shell or file access) and a separate script validates its JSON output and writes the files. *Prompt-injection defence, least privilege, system design*
+
 ## 2026-11-08
 
 - Self-hosted the notification server so the private briefing never leaves home: login required, deny-all default, separate read-only and post-only accounts, and access rules verified. Kept outage alerts on the public service so they still arrive if the server is down. *Privacy, self-hosting, Docker, access control, alert design*
