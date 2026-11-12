@@ -27,6 +27,10 @@ The agent runs in its own container, as a non-root user with no sudo. Every plat
 
 The same agent now sends a 6am briefing to my phone: today's calendar, emails that need me, and new shared files. Email is untrusted input, since anyone can send text that tries to instruct the agent (prompt injection). So the scheduled run gets only the read tools for mail, calendar and files. Every send, reply, forward, delete, share, calendar-edit and shell tool is explicitly blocked, so a hostile email has nothing to act with. The prompt also says not to follow instructions found in content. Tested with a live run.
 
+## Web research with web-only tools (2026-11-12)
+
+I moved a daily web-research job from my PC to the server agent so it runs whether or not the PC is on. Web pages are untrusted input too, and this container holds the read-only infrastructure keys. So that run gets only web search and web fetch: no shell and no file tools. The agent returns JSON, and a separate script validates it, writes the files and sends the phone message. A hostile page can at worst put a wrong line of text in a report. Tested with a live run.
+
 ## Why it matters
 
 This is the same thinking as service accounts at work: give automation exactly the access it needs, assume it could be misused, and test the limits instead of trusting the label.
