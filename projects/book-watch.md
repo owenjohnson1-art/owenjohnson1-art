@@ -21,4 +21,4 @@ A monitor that streams live crypto trades and order books from public exchange f
 
 ## How it was made
 
-I chose the market and the alerts-only scope. An AI assistant drafted the spec, I had a second AI model review it, and the assistant adopted or corrected each point with reasons. The code will be written by an unattended AI build loop against that spec and reviewed by me.
+I chose the market and the alerts-only scope. An AI assistant drafted the spec, I had a second AI model review it, and the assistant adopted or corrected each point with reasons. The code will be written by an unattended AI build loop against that spec: a builder agent does one task per run, and a separate reviewer agent with no edit tools checks each commit and sends problems back. I review the result.
