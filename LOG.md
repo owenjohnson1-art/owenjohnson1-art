@@ -4,6 +4,7 @@ Newest first. Each entry: what I did, and the skills involved.
 
 ## 2026-11-12
 
+- Specified [Book Watch](projects/book-watch.md), a market-data anomaly monitor: public exchange order-book feeds, 1-minute bars, robust baselines (median/MAD), six detectors, rate-limited phone alerts, and tracking of what the price did after each alert. Alerts only, no trading and no keys. Had a second AI model review the draft, adopted three of its points (book checksum resets, SQLite WAL and retention, event-time bars) and corrected others (per-connection pragmas, Decimal parsing so checksums work, capture off by default to protect disk). *System design, data pipelines, statistics, design review, untrusted-input handling*
 - Made the unattended build loop survive subscription usage limits: it reads the reset time from the tool's message, sleeps until then and carries on, so a build can run for days. Added a working-hours window and a pause file, and tested the time parsing against several message formats. *Bash, automation, resilience, cost control*
 - Split AI work between two agents: an interactive one for planning and review, and the always-on server agent for scheduled jobs. Moved a daily web-research job to the server; because web pages are untrusted input and that container holds read-only infrastructure keys, the run gets web tools only (no shell or file access) and a separate script validates its JSON output and writes the files. *Prompt-injection defence, least privilege, system design*
 
